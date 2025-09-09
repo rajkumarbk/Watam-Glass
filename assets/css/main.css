@@ -251,6 +251,46 @@ h1 span {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+/* For Arabic (RTL) */
+html[dir="rtl"] .logo {
+  margin-left: auto !important;
+  margin-right: 0 !important; /* stick logo to far right */
+}
+
+html[dir="rtl"] #navmenu {
+  margin-left: 0 !important;
+  margin-right: auto !important; /* push nav to the left */
+}
+
+html[dir="rtl"] #navmenu ul {
+  justify-content: flex-start !important; /* align links starting from left */
+}
+
+html[dir="rtl"] #navmenu ul li {
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+/* For English (LTR) */
+html[dir="ltr"] .logo {
+  margin-right: auto !important;
+  margin-left: 0 !important; /* stick logo to far left */
+}
+
+html[dir="ltr"] #navmenu {
+  margin-right: 0 !important;
+  margin-left: auto !important; /* push nav to the right */
+}
+
+html[dir="ltr"] #navmenu ul {
+  justify-content: flex-end !important; /* align links starting from right */
+}
+
+html[dir="ltr"] #navmenu ul li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
 /* navmenu - Desktop */
 @media (min-width: 1200px) {
   .navmenu {
@@ -2936,6 +2976,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   background-color: color-mix(in srgb, var(--default-color), transparent 96%);
   display: flex;
+  font-family: var(--heading-font);
   align-items: center;
   padding: 12px 15px;
   margin-top: 15px;

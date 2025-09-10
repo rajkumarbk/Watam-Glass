@@ -3,6 +3,7 @@
   --default-font: "bahij-janna";
   --heading-font: "bahij-janna";
   --header-font: "jf-flat";
+  --bold-jf: "jf-flat";
   --nav-font: "bahij-janna";
 }
 
@@ -1365,7 +1366,8 @@ section,
 }
 
 .branches .service-item h3 {
-  font-size: 26px;
+  
+  font-family: var(--heading-font);
   font-weight: 700;
   margin-bottom: 15px;
 
@@ -1378,6 +1380,8 @@ section,
 
 .branches .service-item h3 a span {
   display: inline-block;
+  font-size: 27px;
+  font-family: var(--bold-jf);
   color: var(--accent-color);
   text-align: center;
 }
